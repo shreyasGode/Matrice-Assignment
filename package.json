@@ -1,0 +1,38 @@
+{
+  "name": "fullstack-app",
+  "version": "1.0.0",
+  "description": "A full-stack application with React and Express",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "start:frontend": "set PORT=3001 && react-scripts start",
+    "start:backend": "nodemon server.js",
+    "dev": "concurrently --kill-others-on-fail \"npm run start:backend\" \"cross-env PORT=3001 npm run start:frontend\"",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "proxy": "http://localhost:3001",
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
+  "author": "Your Name",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "mongoose": "^6.3.4",
+    "cors": "^2.8.5",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^8.5.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3",
+    "react-router-dom": "^6.0.2"
+  },
+  "devDependencies": {
+    "concurrently": "^7.0.0",
+    "nodemon": "^2.0.15",
+    "cross-env": "^7.0.3"
+  }
+}
